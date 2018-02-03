@@ -31,9 +31,17 @@ class LimitedArray {
   // Use this setter function to add elements to this class
   set(index, value) {
     this.checkLimit(index);
-    this.storage[index] = value;
+    this.storage = value;
   }
 }
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.next = null;
+  }
+}
+
 /* eslint-disable no-bitwise, operator-assignment */
 // This is hash function you'll be using to hash keys
 // There's some bit-shifting magic going on here, but essentially, all it is doing is performing the modulo operator
@@ -52,4 +60,5 @@ const getIndexBelowMax = (str, max) => {
 module.exports = {
   LimitedArray,
   getIndexBelowMax,
+  LinkedList,
 };
